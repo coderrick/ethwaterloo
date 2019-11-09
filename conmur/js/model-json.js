@@ -29,21 +29,6 @@
          * @param {function} the callback function to call with the loaded data
          */
         this.loadInitialData = function (dataLoadedCallback) {
-            // Use the blockchain to get the information
-            const tokenContractAbi = {};
-            const tokenContract = web3.eth.contract(tokenContractAbi);
-            const tokenContractInstance = tokenContract.at('token-address');
-
-            const mediaIds = tokenContractInstance.mediaIds.call(function(error, result) {
-                if (error) throw error;
-                return result;
-            });
-
-            mediaIds.map(function(id) {
-                return 
-            })
-              
-
             var requestData = {
                  url: appSettings.dataURL,
                  type: 'GET',

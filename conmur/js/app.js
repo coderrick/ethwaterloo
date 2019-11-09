@@ -1011,8 +1011,7 @@
             errorHandler.informDev(errType, errType.errToDev, errStack);
         }.bind(this));
 
-        // this.loginUser();
-        this.makeInitialDataCall();
+        this.loginUser();
     }
 
     exports.App = App;
