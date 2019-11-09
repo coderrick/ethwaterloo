@@ -12,7 +12,8 @@
                 "Travel",
                 "Trending Now"
             ],
-            "description": "Good times with lots of sun."
+            "description": "Good times with lots of sun.",
+            "walletAddress": "0x91fADfa044258677770b2e48C0fa95002A65015a"
         },
         {
             "id": "e47f9ec3-384e-dc74-09d4-57bc60afce3f",
@@ -25,7 +26,8 @@
                 "Leisure",
                 "Travel"
             ],
-            "description": "One of the best vacations I ever took!"
+            "description": "One of the best vacations I ever took!",
+            "walletAddress": "0x91fADfa044258677770b2e48C0fa95002A65015a"
         },
         {
             "id": "27a9c25b-7a17-7639-b85a-0601d8cf0cd2",

@@ -15,7 +15,7 @@
          this.mediaData       = [];
          this.categoryData    = [];
          this.currSubCategory = [];
-         this.currData = [];
+         this.currData        = [];
          this.currentCategory = 0;
          this.currentItem     = 0;
          this.defaultTheme    = "default";
