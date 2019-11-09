@@ -30,7 +30,7 @@
          */
         this.loadInitialData = function (dataLoadedCallback) {
             var requestData = {
-                 url: mediaJson,
+                 url: appSettings.dataURL,
                  type: 'GET',
                  crossDomain: true,
                  dataType: 'json',
