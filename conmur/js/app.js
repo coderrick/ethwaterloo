@@ -75,6 +75,26 @@
         //main application container div
         this.$appContainer = $("#app-container");
 
+        this.loginUser = function () {
+            this.$appContainer.empty();
+            let _this = this;
+
+            const fm = new Fortmatic('pk_test_D05641ECFF9DAD04');
+            window.web3 = new Web3(fm.getProvider());
+            this.userAddress = web3.currentProvider.enable()
+                .then(function () {
+                    _this.makeInitialDataCall();
+                })
+                .catch(function (e) {
+                    console.log("Error authenticating");
+                    console.log(e);
+                    let buttons = _this.createButtonsForErrorDialog(_this.exitApp(), _this.exitApp());
+                    let errorDialog = errorHandler.createErrorDialog("Could not authenticate", "There was an error logging you in", buttons);
+                    _this.transitionToErrorDialog(errorDialog);
+                    
+                });
+        }
+
        /**
         * Handle the call to the model to get our data 
         */
@@ -986,7 +1006,7 @@
             errorHandler.informDev(errType, errType.errToDev, errStack);
         }.bind(this));
 
-        this.makeInitialDataCall();
+        this.loginUser();
     }
 
     exports.App = App;
