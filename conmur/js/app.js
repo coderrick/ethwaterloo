@@ -93,6 +93,11 @@
                     _this.transitionToErrorDialog(errorDialog);
                     
                 });
+
+            Zabo.init({
+                clientId: 'lKA0W9a0RSiz8vDIsLmuypwSUBhDEauGdeTtndRAQTutngmCVQiykYtzXZUBpOLA',
+                env: 'sandbox'
+            });
         }
 
        /**

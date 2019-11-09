@@ -176,14 +176,17 @@
             };
 
             buttonView.handleButtonCallback = function() {
-                //add button functionality here
-                console.log(arguments);
+                // Call the .connect() window
+                Zabo.connect().onConnection(account => {
+                    console.log('account connected:', account)
+                }).onError(error => {
+                    console.error('account connection error:', error)
+                })
             };
 
             //Create a buttons array for the buttons you want to add
             var buttonArr = [
-                {"id" : "buttonOne", "buttonValue" : "Action B1"},
-                {"id" : "buttonTwo", "buttonValue" : "Action B2"}
+                {"id" : "buttonOne", "buttonValue" : "Tip"},
             ];
 
             buttonView.render(this.$el.find("#summary-buttons-container"), buttonArr, buttonView.handleButtonCallback);
